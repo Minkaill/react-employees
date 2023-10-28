@@ -3,6 +3,8 @@ import { Paths } from "./paths";
 import { Register } from "./pages/register";
 import { Login } from "./pages/login";
 import { Employees } from "./pages/employees";
+import { CreateEmployee } from "./pages/employees/createEmployee";
+import { Status } from "./pages/status";
 
 export const router = createBrowserRouter([
   {
@@ -18,7 +20,11 @@ export const router = createBrowserRouter([
     element: <Employees />,
   },
   {
-    path: Paths.employee,
-    element: <h1>employee</h1>,
+    path: Paths.employeeAdd,
+    element: <CreateEmployee />,
+  },
+  {
+    path: `${Paths.status}/:status`,
+    element: <Status />,
   },
 ]);

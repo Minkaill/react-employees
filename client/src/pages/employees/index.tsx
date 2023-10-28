@@ -7,12 +7,20 @@ import type { ColumnsType } from "antd/es/table";
 import { Employee } from "@prisma/client";
 import { useNavigate } from "react-router-dom";
 import { Paths } from "../../paths";
+import React from "react";
+import { useAppSelector } from "../../app/hooks";
+import { selectorUser } from "../../features/auth/authSlice";
 
 const columns: ColumnsType<Employee> = [
   {
     title: "Имя",
     dataIndex: "firstName",
     key: "firstName",
+  },
+  {
+    title: "Фамилия",
+    dataIndex: "lastName",
+    key: "lastName",
   },
   {
     title: "Возраст",
@@ -29,11 +37,20 @@ const columns: ColumnsType<Employee> = [
 export const Employees = () => {
   const { data, isLoading } = useGetAllEmployeesQuery();
   const navigate = useNavigate();
+  const user = useAppSelector(selectorUser);
+
+  React.useEffect(() => {
+    if (!user) {
+      navigate("/login");
+    }
+  }, [navigate, user]);
+
+  const onAddEmployee = () => navigate(Paths.employeeAdd);
 
   return (
     <Layout>
       <CustomButton
-        onClick={null as any}
+        onClick={onAddEmployee}
         type="primary"
         icon={<PlusCircleOutlined />}
       >
