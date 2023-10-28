@@ -1,7 +1,7 @@
 import { User } from "@prisma/client";
 import { createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../../app/store";
-import { authApi } from "../../app/services/auth";
+import { authApi } from "../../app/services/auth/auth";
 
 interface InitialState {
   user: (User & { token: string }) | null;

@@ -9,7 +9,7 @@ const baseQuery = fetchBaseQuery({
       localStorage.getItem("token");
 
     if (token && token !== null) {
-      headers.set("authrization", `Bearer ${token}`);
+      headers.set("authorization", `Bearer ${token}`);
     }
   },
 });
