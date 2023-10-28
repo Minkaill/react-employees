@@ -5,6 +5,7 @@ import { Login } from "./pages/login";
 import { Employees } from "./pages/employees";
 import { CreateEmployee } from "./pages/employees/createEmployee";
 import { Status } from "./pages/status";
+import { Employee } from "./pages/employees/employee";
 
 export const router = createBrowserRouter([
   {
@@ -26,5 +27,9 @@ export const router = createBrowserRouter([
   {
     path: `${Paths.status}/:status`,
     element: <Status />,
+  },
+  {
+    path: `${Paths.employee}/:id`,
+    element: <Employee />,
   },
 ]);

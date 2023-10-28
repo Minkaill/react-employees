@@ -9,7 +9,7 @@ export const employeesApi = api.injectEndpoints({
         method: "GET",
       }),
     }),
-    getEmployee: builder.query<Employee[], string>({
+    getEmployee: builder.query<Employee, string>({
       query: (id) => ({
         url: `/employees/${id}`,
         method: "GET",
@@ -23,7 +23,7 @@ export const employeesApi = api.injectEndpoints({
     }),
     removeEmployee: builder.mutation<string, string>({
       query: (id) => ({
-        url: `/employees/edit/${id}`,
+        url: `/employees/remove/${id}`,
         method: "POST",
         body: { id },
       }),
