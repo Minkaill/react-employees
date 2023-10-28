@@ -5,6 +5,7 @@ import { store } from "./app/store";
 import { router } from "./router";
 import React from "react";
 import "./index.css";
+import { ConfigProvider, theme } from "antd";
 
 const container = document.getElementById("root")!;
 const root = createRoot(container);
@@ -12,7 +13,13 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <RouterProvider router={router} />
+      <ConfigProvider
+        theme={{
+          algorithm: theme.darkAlgorithm,
+        }}
+      >
+        <RouterProvider router={router} />
+      </ConfigProvider>
     </Provider>
   </React.StrictMode>
 );
