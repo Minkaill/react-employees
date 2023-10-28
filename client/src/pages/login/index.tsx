@@ -11,7 +11,7 @@ import React from "react";
 import { ErrorMessage } from "../../components/error";
 
 export const Login = () => {
-  const [loginUser, loginUserResult] = useLoginMutation();
+  const [loginUser] = useLoginMutation();
   const [error, setError] = React.useState<string>("");
   const navigate = useNavigate();
 
