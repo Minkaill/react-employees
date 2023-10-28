@@ -43,7 +43,7 @@ export const PasswordInput: React.FC<Props> = ({
         }),
       ]}
     >
-      <Input placeholder={placeholder} size="large" />
+      <Input type="password" placeholder={placeholder} size="large" />
     </Form.Item>
   );
 };

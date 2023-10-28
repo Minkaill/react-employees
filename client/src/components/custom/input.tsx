@@ -1,9 +1,9 @@
-import { Form, Input, message } from "antd";
+import { Form, Input } from "antd";
 
 type Props = {
   name: string;
   placeholder: string;
-  type: string;
+  type?: string;
 };
 
 export const CustomInput: React.FC<Props> = ({ name, placeholder, type }) => {

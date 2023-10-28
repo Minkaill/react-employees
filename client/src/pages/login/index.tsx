@@ -1,4 +1,4 @@
-import { Card, Form, Input, Row, Space, Typography } from "antd";
+import { Card, Form, Row, Space, Typography } from "antd";
 import { Layout } from "../../components/layout";
 import { PasswordInput } from "../../components/custom/password";
 import { CustomInput } from "../../components/custom/input";
@@ -21,7 +21,9 @@ export const Login = () => {
           <Space size="large" direction="vertical">
             <Typography.Text>
               Нет аккаунта?
-              <Link to={Paths.register}>Зарегистрируйтесь</Link>
+              <Link style={{ marginLeft: "4px" }} to={Paths.register}>
+                Зарегистрируйтесь
+              </Link>
             </Typography.Text>
           </Space>
         </Card>
