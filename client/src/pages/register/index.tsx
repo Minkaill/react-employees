@@ -7,7 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Paths } from "../../paths";
 import { useRegisterMutation } from "../../app/services/auth/auth";
 import React from "react";
-import { User } from "@prisma/client";
+import { User } from "../../../../server/node_modules/@prisma/client";
 import { isErrorWithMessage } from "../../utils/is-error-with-message";
 import { ErrorMessage } from "../../components/error";
 

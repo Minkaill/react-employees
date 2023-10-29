@@ -4,7 +4,7 @@ import { Layout } from "../../components/layout";
 import { Table } from "antd";
 import { useGetAllEmployeesQuery } from "../../app/services/employees/employees";
 import type { ColumnsType } from "antd/es/table";
-import { Employee } from "@prisma/client";
+import { Employee } from "../../../../server/node_modules/@prisma/client";
 import { useNavigate } from "react-router-dom";
 import { Paths } from "../../paths";
 import React from "react";

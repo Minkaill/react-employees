@@ -9,7 +9,7 @@ import { Row } from "antd";
 import { EmployeeForm } from "../../../components/custom/employeeForm";
 import { isErrorWithMessage } from "../../../utils/is-error-with-message";
 import { Paths } from "../../../paths";
-import { Employee } from "@prisma/client";
+import { Employee } from "../../../../../server/node_modules/@prisma/client";
 
 export const UpdateEmployee = () => {
   const navigate = useNavigate();

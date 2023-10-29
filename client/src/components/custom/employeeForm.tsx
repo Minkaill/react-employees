@@ -1,4 +1,4 @@
-import { Employee } from "@prisma/client";
+import { Employee } from "../../../../server/node_modules/@prisma/client";
 import { Card, Form, Space } from "antd";
 import { CustomInput } from "./input";
 import { ErrorMessage } from "../error";

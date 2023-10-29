@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { useAppSelector } from "../../app/hooks";
 import { selectorUser } from "../../features/auth/authSlice";
 import { useAddEmployeeMutation } from "../../app/services/employees/employees";
-import { Employee } from "@prisma/client";
+import { Employee } from "../../../../server/node_modules/@prisma/client";
 import { Paths } from "../../paths";
 import { isErrorWithMessage } from "../../utils/is-error-with-message";
 
