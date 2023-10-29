@@ -62,6 +62,7 @@ export const Employees = () => {
         loading={isLoading}
         dataSource={data}
         pagination={false}
+        scroll={{ y: 440 }}
         rowKey={(record) => record.id}
         onRow={(record) => {
           return { onClick: () => navigate(`${Paths.employee}/${record.id}`) };
