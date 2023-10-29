@@ -1,7 +1,6 @@
 import { Row } from "antd";
 import { Layout } from "../../components/layout";
 import { EmployeeForm } from "../../components/custom/employeeForm";
-import { error } from "console";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useAppSelector } from "../../app/hooks";

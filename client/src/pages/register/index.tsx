@@ -6,8 +6,6 @@ import { CustomButton } from "../../components/custom/button";
 import { Link, useNavigate } from "react-router-dom";
 import { Paths } from "../../paths";
 import { useRegisterMutation } from "../../app/services/auth/auth";
-import { useAppSelector } from "../../app/hooks";
-import { selectorUser } from "../../features/auth/authSlice";
 import React from "react";
 import { User } from "@prisma/client";
 import { isErrorWithMessage } from "../../utils/is-error-with-message";
@@ -18,7 +16,6 @@ type RegisterData = Omit<User, "id"> & { confirmPassword: string };
 export const Register = () => {
   const [error, setError] = React.useState("");
   const [register] = useRegisterMutation();
-  const user = useAppSelector(selectorUser);
   const navigate = useNavigate();
 
   const onRegister = async (data: RegisterData) => {
