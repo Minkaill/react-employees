@@ -1,4 +1,4 @@
-import { Employee } from "../../../../../server/node_modules/@prisma/client";
+import { Employee } from "@prisma/client";
 import { api } from "../api";
 
 export const employeesApi = api.injectEndpoints({
